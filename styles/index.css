@@ -258,11 +258,19 @@ header {
 }
 
 .features-content-slider {
-  width: 100%;
-  padding: 1rem 0 1rem 10%;
-  margin: 1rem 0;
+}
+
+.features-cards {
+  padding: 1rem 0;
   display: flex;
-  overflow-x: auto;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.features-cards::-webkit-scrollbar {
+  display: none;
 }
 
 .feature {
@@ -272,6 +280,7 @@ header {
   background: white;
   border-radius: 10px;
   box-shadow: var(--shadow-8dp);
+  scroll-snap-align: center;
 }
 
 .feature + .feature {
@@ -325,6 +334,7 @@ header {
 
 .testimonial {
   scroll-snap-align: start;
+  scroll-snap-stop: always;
   flex-shrink: 0;
   width: 100%;
   margin-right: 50px;
