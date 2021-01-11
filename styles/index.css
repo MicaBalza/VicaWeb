@@ -137,11 +137,11 @@ h6 {
 
 .split {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 .split > * + * {
-  margin: calc(var(--spacer)) 0 0 0;
+  margin: var(--spacer) 0 0 0;
 }
 
 @media (max-width: 749px) {
@@ -149,6 +149,15 @@ h6 {
     width: 85%;
     margin-right: auto;
     margin-left: auto;
+  }
+}
+
+@media (min-width: 750px) {
+  .split {
+    flex-direction: row;
+  }
+  .split > * + * {
+    margin: 0 0 0 var(--spacer);
   }
 }
 
@@ -253,22 +262,6 @@ header {
   }
 }
 
-/* INDICATOR */
-
-.indicator {
-  margin: 0 auto;
-}
-
-.indicator > a::after {
-  content: " ";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin: 0.25em;
-  border-radius: 100px;
-  background: var(--clr-orange-500);
-}
-
 /* HERO */
 
 .hero {
@@ -277,13 +270,39 @@ header {
 
 .hero-image {
   align-self: flex-end;
+  margin-top: 0;
+}
+
+#hero-1280-img {
+  display: none;
+}
+
+@media (min-width: 750px) {
+  .hero {
+    padding-top: 50px;
+    align-items: center;
+  }
+  .hero-content {
+    padding: 100px 0 0 100px;
+  }
+  .hero-image {
+    width: 50%;
+  }
+  #hero-1280-img {
+    display: block;
+  }
+  #hero-mobile-img {
+    display: none;
+  }
 }
 
 /* FEATURES */
 
+#cellphone-1280-img {
+  display: none;
+}
+
 .features {
-  display: flex;
-  flex-direction: column-reverse;
   padding-bottom: 0;
 }
 
@@ -328,6 +347,23 @@ header {
   fill: var(--clr-orange-500);
 }
 
+@media (min-width: 750px) {
+  #cellphone-mobile-img {
+    display: none;
+  }
+  #cellphone-1280-img {
+    display: block;
+    margin-top: -100px;
+  }
+
+  .features-content {
+    width: 50%;
+  }
+  #interfaz-indicator {
+    display: none;
+  }
+}
+
 /* BACKOFFICE */
 
 .backoffice > h2 {
@@ -337,6 +373,12 @@ header {
 .backoffice-slider > img {
   margin: 0 auto;
   margin-bottom: 1rem;
+}
+
+@media (min-width: 750px) {
+  .backoffice-slider > img {
+    width: 80%;
+  }
 }
 
 /* TESTIMONIALS */
@@ -413,6 +455,22 @@ footer > .text-body-2:hover {
 
 #logo-v-svg {
   height: 32px;
+}
+
+/* INDICATOR */
+
+.indicator {
+  margin: 0 auto;
+}
+
+.indicator > a::after {
+  content: " ";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0.25em;
+  border-radius: 100px;
+  background: var(--clr-orange-500);
 }
 
 /* MODAL */
