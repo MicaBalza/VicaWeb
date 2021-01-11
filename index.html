@@ -12,16 +12,27 @@
     />
     <script defer src="js/testimonials.js"></script>
     <script defer src="js/whatsapp.js"></script>
+    <script defer src="js/modal.js"></script>
   </head>
   <body>
     <header>
       <svg id="logo-svg"><use xlink:href="assets/img/iconos.svg#logo"></use></svg>
       <div class="header-buttons">
-        <a href="#" class="btn btn--sm btn--outlined btn--inverted">Registrá tu establecimiento</a>
+        <a href="#" class="btn btn--sm btn--outlined btn--inverted" id="register-btn">Registrá tu establecimiento</a>
         <div class="vertical-line" id="header-hr" /></div>
         <a href="#" class="btn btn--sm" id="signin-btn">Ingresar</a>
       </div>
     </header>
+
+    <div id="modal-container">
+      <div class="modal-form text--center flow-content">
+        
+        <svg id="logo-modal-svg"><use xlink:href="assets/img/iconos.svg#logo"></use></svg>
+        <h6>¡Comenzá tu registro acá!</h6>
+        <p class="text-body-2">Te pedimos que completes los siguientes datos sobre el establecimiento:</p>
+        <p class="close-btn">X</p>
+      </div>
+    </div>
 
     <div class="background">
       <img src="assets/img/Background-figure.svg" alt="">
@@ -184,7 +195,7 @@
 
     
 
-    <footer class="text--center">
+    <footer class="text--center flow-content">
       <svg id="logo-v-svg"><use xlink:href="assets/img/iconos.svg#logo-v"></use></svg>
       <p class="text-body-2"><a href="#">Términos y Condiciones</a></p>
       <p class="text-body-2">Políticas de Privacidad</p>

@@ -10,6 +10,16 @@
     0 4px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Z-INDEX 
+
+whatsapp: 1500
+footer: 1001
+header: 1000
+main: 500
+background: 1
+
+*/
+
 /* GENERAL */
 
 *,
@@ -403,7 +413,42 @@ footer > .text-body-2:hover {
 
 #logo-v-svg {
   height: 32px;
-  margin-bottom: 2.5rem;
+}
+
+/* MODAL */
+
+#modal-container {
+  position: fixed;
+  z-index: 2000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s ease opacity;
+}
+
+#logo-modal-svg {
+  width: 120px;
+  height: 46px;
+  fill: var(--clr-orange-500);
+}
+
+.modal-form {
+  position: relative;
+  width: 87%;
+  margin: 1.2rem auto;
+  padding: 3rem 1.5rem;
+  background: var(--clr-white);
+  border-radius: 10px;
+  box-shadow: var(--shadow-8dp);
+}
+
+.close-btn {
+  position: absolute;
+  top: -1rem;
+  right: 1rem;
+  color: var(--clr-orange-500);
 }
 
 /* BACKGROUND */

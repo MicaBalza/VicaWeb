@@ -17,7 +17,7 @@ var ticking = false;
 
 window.onscroll = function (e) {
   if (!ticking) {
-    if (scrollY > 50 && scrollY < limit) {
+    if (scrollY > 50 /* && scrollY < limit */) {
       whatsappButton.style.position = "fixed";
       whatsappButton.style.bottom = "var(--spacer)";
       whatsappButton.style.opacity = "1";
@@ -29,11 +29,11 @@ window.onscroll = function (e) {
       whatsappButton.style.opacity = "0";
       console.log("chau");
       ticking = false;
-    } else if (scrollY > limit) {
+    } /* else if (scrollY > limit) {
       whatsappButton.style.position = "absolute";
       whatsappButton.style.bottom = `${-limit}px`;
       console.log(limit);
       ticking = false;
-    }
+    } */
   }
 };
