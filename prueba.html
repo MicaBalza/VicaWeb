@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/owl.carousel.css" />
+    <link rel="stylesheet" href="styles/owl.theme.default.css" />
+    <script src="js/jquery.min.js"></script>
+    <script defer src="js/owl.carousel.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="owl-carousel owl-theme owl-loaded" style="background: gray">
+      <div class="owl-stage-outer">
+        <div class="owl-stage">
+          <div class="owl-item">
+            <div class="feature" id="feature-1">
+              <svg id="gestion-svg">
+                <use xlink:href="assets/img/iconos.svg#gestion"></use>
+              </svg>
+              <h6>Gestión de pedidos</h6>
+              <p class="text-body-2">
+                Podrás ver los pedidos realizados desde el panel de control y
+                llevar la gestión de los mismos.
+              </p>
+            </div>
+          </div>
+          <div class="owl-item">
+            <div class="feature" id="feature-2">
+              <svg id="menu-digital-svg">
+                <use xlink:href="assets/img/iconos.svg#gestion"></use>
+              </svg>
+              <h6>Menú digital</h6>
+              <p class="text-body-2">
+                Podrás agregar o quitar productos de tu menú, sus descripciones
+                y fotos y modificar sus precios siempre que lo desees.
+              </p>
+            </div>
+          </div>
+          <div class="owl-item">
+            <div class="feature" id="feature-3">
+              <svg id="pagos-svg">
+                <use xlink:href="assets/img/iconos.svg#gestion"></use>
+              </svg>
+              <h6>Pagos online</h6>
+              <p class="text-body-2">
+                Los pagos de tus pedidos podrán realizarse de manera online sin
+                necesidad de utilizar el efectivo si así lo querés.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        console.log("hola");
+        $(".owl-carousel").owlCarousel({
+          margin: 50,
+          nav: false,
+          stagePadding: 50,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1,
+              nav: false,
+            },
+            750: {
+              items: 2,
+              nav: false,
+            },
+            1000: {
+              items: 5,
+              nav: false,
+              loop: false,
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

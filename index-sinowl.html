@@ -13,12 +13,7 @@
     <script defer src="js/testimonials.js"></script>
     <script defer src="js/whatsapp.js"></script>
     <script defer src="js/modal.js"></script>
-    <link rel="stylesheet" href="styles/owl.carousel.css" />
-    <link rel="stylesheet" href="styles/owl.theme.default.css" />
-    <script src="js/jquery.min.js"></script>
-    <script defer src="js/owl.carousel.min.js"></script>
   </head>
-
   <body>
     <header>
       <svg id="logo-svg"><use xlink:href="assets/img/iconos.svg#logo"></use></svg>
@@ -49,6 +44,7 @@
   
     <main>
       <section class="hero split ">
+        
         <div class="hero-content container-xs flow-content">
           <h1 class="text--orange text--bold-xs">Tu plataforma <br> de pedidos online</h1>
           <p class="text-body-1">VICA te permite administrar los pedidos y pagos en mesa y take away, brindando la mejor experiencia de compra en tu establecimiento.</p>
@@ -77,86 +73,70 @@
             <p class="text-body-1">En VICA nos aseguramos de lograr una interfaz integral para que brindes la mejor experiencia de compra a tus clientes.</p>
           </div>
           <div class="features-content-slider">
-            <!-- <svg id="arrow-outline-svg"><use xlink:href="assets/img/iconos.svg#arrow-outline"></use></svg> -->
-            <div class="owl-carousel owl-theme owl-loaded" id="features-carousel" >
-              <div class="owl-stage-outer">
-                <div class="owl-stage">
-                  <div class="owl-item">
-                    <div class="feature" id="feature-1">
-                      <svg id="gestion-svg">
-                        <use xlink:href="assets/img/iconos.svg#gestion"></use>
-                      </svg>
-                      <h6>Gestión de pedidos</h6>
-                      <p class="text-body-2">
-                        Podrás ver los pedidos realizados desde el panel de control y
-                        llevar la gestión de los mismos.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="owl-item">
-                    <div class="feature" id="feature-2">
-                      <svg id="menu-digital-svg">
-                        <use xlink:href="assets/img/iconos.svg#gestion"></use>
-                      </svg>
-                      <h6>Menú digital</h6>
-                      <p class="text-body-2">
-                        Podrás agregar o quitar productos de tu menú, sus descripciones
-                        y fotos y modificar sus precios siempre que lo desees.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="owl-item">
-                    <div class="feature" id="feature-3">
-                      <svg id="pagos-svg">
-                        <use xlink:href="assets/img/iconos.svg#gestion"></use>
-                      </svg>
-                      <h6>Pagos online</h6>
-                      <p class="text-body-2">
-                        Los pagos de tus pedidos podrán realizarse de manera online sin
-                        necesidad de utilizar el efectivo si así lo querés.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="owl-item">
-                    <div class="feature" id="feature-4">
-                      <svg id="menu-visible-svg"><use xlink:href="assets/img/iconos.svg#gestion"></use></svg>
-                      <h6>Menú siempre visible</h6>
-                      <p class="text-body-2">No es necesario que tus clientes escaneen el código QR 
-                        para visualizar la carta de tu establecimiento. Tu menú estará siempre visible en la app.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="owl-item">
-                    <div class="feature" id="feature-5">
-                      <svg id="soporte-svg"><use xlink:href="assets/img/iconos.svg#gestion"></use></svg>
-                      <h6>Soporte las 24hs.</h6>
-                      <p class="text-body-2">Te ofrecemos soporte para ayudarte a resolver cualquier inconveniente.</p>
-                    </div>
-                  </div>
-                  <div class="owl-item">
-                    <div class="feature" id="feature-6">
-                      <svg id="incremento-svg"><use xlink:href="assets/img/iconos.svg#gestion"></use></svg>
-                      <h6>Incremento de tus ventas</h6>
-                      <p class="text-body-2">Ayudamos a tu negocio en el incremento de las ventas.</p>
-                    </div>
-                  </div>
-                  <div class="owl-item">
-                    <div class="feature" id="feature-7">
-                      <svg id="fidelizacion-svg"><use xlink:href="assets/img/iconos.svg#gestion"></use></svg>
-                      <h6>Fidelización con tu cliente</h6>
-                      <p class="text-body-2">Buscamos que tus consumidores se vuelvan clientes habituales. ¡Sabemos cómo hacerlo!
-                      </p>
-                    </div>
-                  </div>
-                  <div class="owl-item">
-                    <div class="feature" id="feature-8">
-                      <svg id="tiempos-svg"><use xlink:href="assets/img/iconos.svg#gestion"></use></svg>
-                      <h6>Optimizamos tus tiempos</h6>
-                      <p class="text-body-2">Te ayudamos a mejorar los procesos en tu establecimiento.</p>
-                    </div>
-                  </div>
-                </div>
+            <svg id="arrow-outline-svg"><use xlink:href="assets/img/iconos.svg#arrow-outline"></use></svg>
+            <div class="features-cards">
+              <div style="width: 24px; height: 10px; background: transparent; flex-shrink: 0;"></div>
+              <div class="feature" id="feature-1">
+                <svg id="gestion-svg"><use xlink:href="assets/img/iconos.svg#gestion"></use></svg>
+                <h6>Gestión de pedidos</h6>
+                <p class="text-body-2">Podrás ver los pedidos realizados desde el panel de control y llevar la gestión de los mismos.</p>
               </div>
+              <div class="feature" id="feature-2">
+                <svg id="menu-digital-svg"><use xlink:href="assets/img/iconos.svg#gestion"></use></svg>
+                <h6>Menú digital</h6>
+                <p class="text-body-2">Podrás agregar o quitar productos de tu menú, sus descripciones y fotos y modificar sus precios siempre que lo desees.
+                </p>
+              </div>
+              <div class="feature" id="feature-3">
+                <svg id="pagos-svg"><use xlink:href="assets/img/iconos.svg#gestion"></use></svg>
+                <h6>Pagos online</h6>
+                <p class="text-body-2">Los pagos de tus pedidos podrán realizarse de manera online sin necesidad de utilizar el efectivo si así lo querés.
+                </p>
+              </div>
+              <div class="feature" id="feature-4">
+                <svg id="menu-visible-svg"><use xlink:href="assets/img/iconos.svg#gestion"></use></svg>
+                <h6>Menú siempre visible</h6>
+                <p class="text-body-2">No es necesario que tus clientes escaneen el código QR para visualizar la carta de tu establecimiento. Tu menú estará siempre visible en la app.
+                </p>
+              </div>
+              <div class="feature" id="feature-5">
+                <svg id="soporte-svg"><use xlink:href="assets/img/iconos.svg#gestion"></use></svg>
+                <h6>Soporte las 24hs.</h6>
+                <p class="text-body-2">Te ofrecemos soporte para ayudarte a resolver cualquier inconveniente.
+    
+                </p>
+              </div>
+              <div class="feature" id="feature-6">
+                <svg id="incremento-svg"><use xlink:href="assets/img/iconos.svg#gestion"></use></svg>
+                <h6>Incremento de tus ventas</h6>
+                <p class="text-body-2">Ayudamos a tu negocio en el incremento de las ventas.
+                </p>
+              </div>
+              <div class="feature" id="feature-7">
+                <svg id="fidelizacion-svg"><use xlink:href="assets/img/iconos.svg#gestion"></use></svg>
+                <h6>Fidelización con tu cliente</h6>
+                <p class="text-body-2">Buscamos que tus consumidores se vuelvan clientes habituales. ¡Sabemos cómo hacerlo!
+    
+                </p>
+              </div>
+              <div class="feature" id="feature-8">
+                <svg id="tiempos-svg"><use xlink:href="assets/img/iconos.svg#gestion"></use></svg>
+                <h6>Optimizamos tus tiempos</h6>
+                <p class="text-body-2">Te ayudamos a mejorar los procesos en tu establecimiento.
+                </p>
+              </div>
+              <div style="width: 24px; height: 10px; background: transparent; flex-shrink: 0;"></div>
+  
+            </div>
+            <div class="indicator text--center" id="feature-indicator">
+              <a href="#feature-1"></a>
+              <a href="#feature-2"></a>
+              <a href="#feature-3"></a>
+              <a href="#feature-4"></a>
+              <a href="#feature-5"></a>
+              <a href="#feature-6"></a>
+              <a href="#feature-7"></a>
+              <a href="#feature-8"></a>
             </div>
           </div>
         </div>
@@ -216,6 +196,8 @@
       </section>
     </main>
 
+    
+
     <footer class="text--center flow-content">
       <svg id="logo-v-svg"><use xlink:href="assets/img/iconos.svg#logo-v"></use></svg>
       <p class="text-body-2"><a href="#">Términos y Condiciones</a></p>
@@ -224,25 +206,7 @@
       <p class="text-caption">Copyright © 2020 VICA S.A. <br> Todos los derechos reservados.</p>
     </footer>
 
-    <script>
-      $(document).ready(function () {
-
-        $("#features-carousel").owlCarousel({
-          margin: 32,
-          nav: false,
-          responsiveClass: true,
-          responsive: {
-            0: {
-              items: 1,
-              stagePadding: 50,
-            },
-            750: {
-              items: 2,
-              stagePadding: 50,
-            },
-          },
-        });
-      });
-    </script>
+    
+    
   </body>
 </html>
