@@ -135,6 +135,10 @@ h6 {
   margin-top: var(--flow-space, calc(var(--spacer) * 1.25));
 }
 
+.flow-content--s {
+  --flow-space: 1rem;
+}
+
 .flow-content--l {
   --flow-space: 5rem;
 }
@@ -368,6 +372,10 @@ header {
     flex-shrink: 0;
   }
 
+  .features-content {
+    width: 50%;
+  }
+
   #arrow-outline-svg {
     width: 39px;
     height: 39px;
@@ -418,39 +426,18 @@ header {
   overflow: hidden;
 }
 
-.testimonials-cards {
-  display: flex;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-}
-
-.testimonials-cards::-webkit-scrollbar {
-  display: none;
-}
-
-.testimonial {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  flex-shrink: 0;
-  width: 100%;
-  margin-right: 50px;
-  border-radius: 10px;
-  transform-origin: center center;
-  transform: scale(1);
-  transition: transform 0.5s;
-  position: relative;
-}
-
-.testimonial + .testimonial {
-  margin-left: 1rem;
+.testimonial-img {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
 }
 
 .comillas-svg {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 1rem;
+  width: 28px;
+  height: 24px;
   fill: var(--clr-orange-500);
 }
 /* #endregion */
