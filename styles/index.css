@@ -82,8 +82,9 @@ h2 {
 }
 
 h3 {
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1.35em;
 }
 
 h6 {
@@ -126,6 +127,15 @@ h6 {
     font-weight: 700;
   }
 }
+
+@media (min-width: 750px) {
+  .text-caption {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.0156em;
+  }
+}
 /* #endregion */
 
 /* --- UTILITY --- */
@@ -152,6 +162,10 @@ h6 {
   margin: var(--spacer) 0 0 0;
 }
 
+.br--1280 {
+  display: none;
+}
+
 @media (max-width: 749px) {
   .container-xs {
     width: 85%;
@@ -172,6 +186,14 @@ h6 {
   }
   .flow-content > * + * {
     margin-top: var(--flow-space, calc(var(--spacer) * 1.75));
+  }
+
+  .br--750 {
+    display: none;
+  }
+
+  .br--1280 {
+    display: inline;
   }
 }
 /* #endregion */
@@ -220,22 +242,6 @@ h6 {
 }
 /* #endregion */
 
-/* --- SEPARATORS --- */
-/* #region */
-
-.vertical-line {
-  margin: 0 2em;
-  border-left: 2px solid var(--clr-gray);
-  height: 50px;
-}
-
-.horizontal-line {
-  margin: 1.5em auto;
-  border-top: 1px solid var(--clr-gray);
-  width: 50px;
-}
-/* #endregion */
-
 /* --- HEADER --- */
 /* #region */
 
@@ -260,6 +266,12 @@ header {
 .header-buttons {
   display: flex;
   align-items: center;
+}
+
+#header-hr {
+  margin: 0 2em;
+  border-left: 2px solid var(--clr-gray);
+  height: 50px;
 }
 
 #signin-btn,
@@ -412,10 +424,6 @@ header {
 /* --- TESTIMONIALS --- */
 /* #region */
 
-.testimonials {
-  padding-bottom: 0;
-}
-
 .testimonials-content {
   width: 70%;
   margin: 2rem auto;
@@ -454,32 +462,58 @@ footer {
   z-index: 1001;
 }
 
-footer > .text-body-2:hover {
+footer a:hover {
   color: var(--clr-orange-500);
+}
+
+#footer-horizontal-hr {
+  margin: 1.5em auto;
+  border-top: 1px solid var(--clr-gray);
+  width: 50px;
+}
+
+.footer-text > * + * {
+  margin-top: 1.5em;
 }
 
 #logo-v-svg {
   height: 32px;
-}
-
-/* #endregion */
-
-/* --- INDICATOR --- */
-/* #region */
-
-.indicator {
+  width: 28px;
   margin: 0 auto;
+  order: 1;
 }
 
-.indicator > a::after {
-  content: " ";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin: 0.25em;
-  border-radius: 100px;
-  background: var(--clr-orange-500);
+.footer-vertical-hr {
+  display: none;
 }
+
+@media (min-width: 750px) {
+  footer {
+    justify-content: space-between;
+    padding: 1.5rem 6.25rem;
+  }
+  #logo-v-svg {
+    margin: 0;
+    order: 0;
+  }
+  .footer-text {
+    display: flex;
+    align-items: center;
+  }
+  .footer-text > * + * {
+    margin-top: 0;
+    margin-left: 1.5em;
+  }
+  #footer-horizontal-hr {
+    display: none;
+  }
+  .footer-vertical-hr {
+    display: inline;
+    border-left: 1px solid var(--clr-white);
+    height: 42px;
+  }
+}
+
 /* #endregion */
 
 /* --- MODAL --- */

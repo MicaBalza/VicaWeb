@@ -25,7 +25,7 @@
       <svg id="logo-svg"><use xlink:href="assets/img/iconos.svg#logo"></use></svg>
       <div class="header-buttons">
         <a href="#" class="btn btn--sm btn--outlined btn--inverted" id="register-btn">Registrá tu establecimiento</a>
-        <div class="vertical-line" id="header-hr" /></div>
+        <div id="header-hr" /></div>
         <a href="#" class="btn btn--sm" id="signin-btn">Ingresar</a>
       </div>
     </header>
@@ -163,9 +163,23 @@
         </div>
       </section>
 
+      <section class="backoffice container-xs text--center flow-content">
+        <h2>La plataforma que va a potenciar y hacer crecer tu negocio</h2>
+        <div class="backoffice-slider">
+          <img src="assets/img/Backoffice.png" alt="Backoffice: Plataforma Web Vica">
+          <div class="indicator" id="backoffice-indicator">
+            <a href="#backoffice-1"></a>
+            <a href="#backoffice-2"></a>
+            <a href="#backoffice-3"></a>
+            <a href="#backoffice-4"></a>
+  
+          </div>
+        </div>
+      </section>
+
       <section class="testimonials">
         <div class="testimonials-head container-xs text--center flow-content">
-          <h3>Sé parte de los establecimientos que ya se digitalizaron junto a Vica. <span class="text--orange">¡Sumate vos también!</span></h3>
+          <h3>Sé parte de los establecimientos que <br class="br--1280">ya se digitalizaron junto a Vica.<br class="br--1280"> <span class="text--orange">¡Sumate vos también!</span></h3>
           <a href="#" class="btn btn--sm">Registrá tu establecimiento</a>
         </div>
         <div class="testimonials-content text--center">
@@ -177,7 +191,7 @@
                 <p class="text-body-1">Gerente Comercial</p>
               </div>
               <svg class="comillas-svg"><use xlink:href="assets/img/iconos.svg#comillas"></use></svg>
-              <p class="text-body-1">La facilidad de uso de VICA <br> y su moderna tecnología nos permitieron incrementar <br>las ventas un 30% en <br>muy poco tiempo. <br>¡Lo recomiendo totalmente!</p>
+              <p class="text-body-1">La facilidad de uso de VICA y su moderna tecnología nos permitieron incrementar las ventas un 30% en muy poco tiempo. ¡Lo recomiendo totalmente!</p>
             </div>
             <div class="testimonial flow-content flow-content--s" id="testimonial-2">
               <div class="testimonial-img" style="background-image: url('../assets/img/Testimonial-2.jpg');"></div>
@@ -203,27 +217,19 @@
         </div>
       </section>
   
-      <section class="backoffice container-xs text--center flow-content">
-        <h2>La plataforma que va a potenciar y hacer crecer tu negocio</h2>
-        <div class="backoffice-slider">
-          <img src="assets/img/Backoffice.png" alt="Backoffice: Plataforma Web Vica">
-          <div class="indicator" id="backoffice-indicator">
-            <a href="#backoffice-1"></a>
-            <a href="#backoffice-2"></a>
-            <a href="#backoffice-3"></a>
-            <a href="#backoffice-4"></a>
-  
-          </div>
-        </div>
-      </section>
+      
     </main>
 
-    <footer class="text--center flow-content">
+    <footer class="text--center split ">
       <svg id="logo-v-svg"><use xlink:href="assets/img/iconos.svg#logo-v"></use></svg>
-      <p class="text-body-2"><a href="#">Términos y Condiciones</a></p>
-      <p class="text-body-2">Políticas de Privacidad</p>
-      <div class="horizontal-line" id="footer-hr"></div>
-      <p class="text-caption">Copyright © 2020 VICA S.A. <br> Todos los derechos reservados.</p>
+      <div class="footer-text">
+        <p class="text-body-2"><a href="#">Términos y Condiciones</a></p>
+        <div class="footer-vertical-hr"></div>
+        <p class="text-body-2"><a href="#">Políticas de Privacidad</a></p>
+        <div class="footer-vertical-hr"></div>
+        <div id="footer-horizontal-hr"></div>
+        <p class="text-caption">Copyright © 2020 VICA S.A. <br class="br--750"> Todos los derechos reservados.</p>
+      </div>
     </footer>
 
     <script>
@@ -256,6 +262,11 @@
     slideBy: 'page',
     controls: false,
     navPosition: 'bottom',
+    responsive: {
+      750: {
+        disable: true,
+      }
+    }
   });
   </script>
   </body>
