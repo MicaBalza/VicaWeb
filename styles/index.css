@@ -414,8 +414,23 @@ header {
 .backoffice > h2 {
   font-size: 1.25rem;
 }
-
 .backoffice-slider-container {
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.backoffice-slides-container {
+  position: absolute;
+  width: 70%;
+  top: 6vw;
+  left: 11vw;
+}
+
+.backoffice-slide {
+  height: 100%;
+}
+/* .backoffice-slider-container {
   width: 85%;
   height: 200px;
   margin: 0 auto;
@@ -428,9 +443,9 @@ header {
 
 .backoffice-slide {
   height: 115px;
-}
+} */
 
-#backoffice-1 {
+/* #backoffice-1 {
   background: url("../assets/img/Backoffice-1.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -456,7 +471,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
+} */
 
 /* #endregion */
 
