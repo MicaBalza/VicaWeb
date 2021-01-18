@@ -95,7 +95,7 @@ h6 {
 
 .text-body-1 {
   font-weight: 400;
-  font-size: clamp(0.875rem, 3vw, 1.125rem);
+  font-size: clamp(0.875rem, 2vw, 1.125rem);
   letter-spacing: 0.0313em;
   line-height: 1.5625em;
 }
@@ -449,7 +449,7 @@ header {
   fill: var(--clr-orange-500);
 }
 
-@media (min-width: 750px) {
+@media (min-width: 900px) {
   .testimonials-content {
     width: 100%;
     background: none;
