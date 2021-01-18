@@ -165,14 +165,16 @@
 
       <section class="backoffice container-xs text--center flow-content">
         <h2>La plataforma que va a potenciar y hacer crecer tu negocio</h2>
-        <div class="backoffice-slider">
-          <img src="assets/img/Backoffice.png" alt="Backoffice: Plataforma Web Vica">
-          <div class="indicator" id="backoffice-indicator">
-            <a href="#backoffice-1"></a>
-            <a href="#backoffice-2"></a>
-            <a href="#backoffice-3"></a>
-            <a href="#backoffice-4"></a>
-  
+        <div class="backoffice-slider-container">
+          <div class="backoffice-slider">
+            <div class="backoffice-slide" id="backoffice-1">
+            </div>
+            <div class="backoffice-slide" id="backoffice-2">
+            </div>
+            <div class="backoffice-slide" id="backoffice-3">
+            </div>
+            <div class="backoffice-slide" id="backoffice-4">
+            </div>
           </div>
         </div>
       </section>
@@ -267,6 +269,15 @@
         disable: true,
       }
     }
+  });
+  var slider2 = tns({
+    container: '.backoffice-slider',
+    items: 1,
+    slideBy: 'page',
+    controls: false,
+    navPosition: 'bottom',
+    loop: false,
+    
   });
   </script>
   </body>

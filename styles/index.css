@@ -415,16 +415,49 @@ header {
   font-size: 1.25rem;
 }
 
-.backoffice-slider > img {
+.backoffice-slider-container {
+  width: 85%;
+  height: 200px;
   margin: 0 auto;
-  margin-bottom: 1rem;
+  background: url("../assets/img/Backoffice.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 10vw 11vw;
 }
 
-@media (min-width: 750px) {
-  .backoffice-slider > img {
-    width: 80%;
-  }
+.backoffice-slide {
+  height: 115px;
 }
+
+#backoffice-1 {
+  background: url("../assets/img/Backoffice-1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#backoffice-2 {
+  background: url("../assets/img/Backoffice-1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#backoffice-3 {
+  background: url("../assets/img/Backoffice-1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#backoffice-4 {
+  background: url("../assets/img/Backoffice-1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 /* #endregion */
 
 /* --- TESTIMONIALS --- */
