@@ -204,9 +204,9 @@ h6 {
 .btn {
   display: inline-block;
   font-size: var(--fs, 1.125rem);
-  font-weight: bold;
-  letter-spacing: 0.04em;
-  padding: var(--p);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: var(--p, 0.8em 2em);
   border-radius: 200px;
   color: var(--fg, var(--clr-white));
   background: var(--bg, var(--clr-orange-500));
@@ -233,11 +233,17 @@ h6 {
     --color-inverted: var(--clr-white);
     --border-inverted: var(--clr-white);
   }
+  .btn--block {
+    --fs: 0.9375rem;
+    --p: 0.6em 0;
+    width: 100%;
+  }
 }
 
 @media (min-width: 750px) {
-  .btn {
-    padding: 0.5em 2em;
+  .btn--sm {
+    --fs: 0.8125rem;
+    --p: 0.8em 3em;
   }
 }
 /* #endregion */
