@@ -340,12 +340,33 @@ header {
 /* --- FEATURES --- */
 /* #region */
 
+.features-content {
+  position: relative;
+}
+
+#tns4-ow {
+  display: none;
+}
+
+.features-slider-1280-buttons {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: -4rem;
+  z-index: 1;
+}
+
 #cellphone-1280-img {
   display: none;
 }
 
 .features {
   padding-bottom: 0;
+}
+
+.features-slider {
+  margin: 0 auto;
+  padding: 1rem 7.5% 1rem 7.5%;
 }
 
 .feature {
@@ -358,6 +379,10 @@ header {
 
 .feature > * + * {
   margin-top: 1rem;
+}
+
+.features .tns-nav {
+  text-align: center;
 }
 
 #gestion-svg,
@@ -373,11 +398,31 @@ header {
   fill: var(--clr-orange-500);
 }
 
-#arrow-outline-svg {
-  display: none;
+#arrow-next-svg {
+  transform: rotate(180deg);
+}
+
+#arrow-next-svg,
+#arrow-prev-svg {
+  width: 39px;
+  height: 39px;
 }
 
 @media (min-width: 750px) {
+  #tns4-ow {
+    display: inline;
+  }
+
+  .features-slider-1280-buttons {
+    display: flex;
+    width: 115%;
+    justify-content: space-between;
+  }
+
+  #tns3-ow {
+    display: none;
+  }
+
   #cellphone-mobile-img {
     display: none;
   }
@@ -430,48 +475,6 @@ header {
 .backoffice-slide {
   height: 100%;
 }
-/* .backoffice-slider-container {
-  width: 85%;
-  height: 200px;
-  margin: 0 auto;
-  background: url("../assets/img/Backoffice.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  padding: 10vw 11vw;
-}
-
-.backoffice-slide {
-  height: 115px;
-} */
-
-/* #backoffice-1 {
-  background: url("../assets/img/Backoffice-1.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-#backoffice-2 {
-  background: url("../assets/img/Backoffice-1.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-#backoffice-3 {
-  background: url("../assets/img/Backoffice-1.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-#backoffice-4 {
-  background: url("../assets/img/Backoffice-1.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-} */
 
 /* #endregion */
 
