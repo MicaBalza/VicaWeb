@@ -339,7 +339,10 @@
       </section>
 
       <section class="backoffice container-xs text--center flow-content">
-        <h2>La plataforma que va a potenciar y hacer crecer tu negocio</h2>
+        <h2>
+          La plataforma que va a potenciar <br />
+          y hacer crecer tu negocio
+        </h2>
         <div class="backoffice-slider-container">
           <img src="assets/img/Backoffice.png" alt="" />
           <div class="backoffice-slides-container">
@@ -357,6 +360,14 @@
                 <img src="assets/img/Backoffice-1.jpeg" />
               </div>
             </div>
+          </div>
+          <div class="backoffice-slider-buttons">
+            <svg id="backoffice-prev-svg">
+              <use xlink:href="assets/img/iconos.svg#arrow-outline"></use>
+            </svg>
+            <svg id="backoffice-next-svg">
+              <use xlink:href="assets/img/iconos.svg#arrow-outline"></use>
+            </svg>
           </div>
         </div>
       </section>
@@ -485,7 +496,7 @@
     <script type="module">
       import { tns } from "./js/tiny-slider.js";
 
-      var slider = tns({
+      var testimonialSlider = tns({
         container: ".testimonial-slider",
         items: 1,
         slideBy: "page",
@@ -499,16 +510,22 @@
         },
       });
 
-      var slider2 = tns({
+      var backofficeSlider = tns({
         container: ".backoffice-slider",
         items: 1,
         slideBy: "page",
         controls: false,
         navPosition: "bottom",
         loop: false,
+        controlsContainer: ".backoffice-slider-buttons",
+        responsive: {
+          1280: {
+            controls: true,
+          },
+        },
       });
 
-      var slider3 = tns({
+      var featuresSlider = tns({
         container: ".features-slider",
         items: 1,
         controls: false,
@@ -525,7 +542,7 @@
         },
       });
 
-      var slider4 = tns({
+      var featuresSlider1280 = tns({
         container: ".features-slider-1280",
         items: 2,
         mode: "gallery",
