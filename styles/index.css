@@ -333,9 +333,10 @@ header {
   visibility: hidden;
   align-self: flex-end;
   margin-top: 0;
+  position: relative;
 }
 
-#hero-tube-svg {
+#hero-tube-png {
   position: absolute;
   background-image: url(../assets/img/tube.png);
   background-position: left 20px bottom 250px;
@@ -345,7 +346,18 @@ header {
   z-index: -1;
 }
 
-
+#hero-tent-png {
+  position: absolute;
+  width: 12rem;
+  height: 12rem;
+  bottom: 3vw;
+  left: -80px;
+  background-image: url(../assets/img/Tent.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
 
 #hero-1280-img {
   display: none;

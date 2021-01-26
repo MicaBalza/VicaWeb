@@ -18,5 +18,9 @@ function heroAnimation() {
     document.querySelector(".hero-content").style.visibility = "visible";
     document.querySelector(".hero-content").classList.add("animate__animated", "animate__fadeInDown");
     document.querySelector(".hero-image").style.visibility = "visible";
-    document.querySelector(".hero-image").classList.add("animate__animated", "animate__fadeInTopRight");
+    /* document.querySelector(".hero-image").classList.add("animate__animated", "animate__fadeInTopRight"); */
+    document.querySelector("#hero-tube-png").classList.add("animate__animated", "animate__fadeInTopRight");
+    document.querySelector("#hero-1280-img").classList.add("animate__animated", "animate__fadeInTopRight", "animate__delay-2s");
+    document.querySelector("#hero-tent-png").classList.add("animate__animated", "animate__fadeInRight", "animate__delay-3s");
 }
+
