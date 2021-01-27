@@ -78,22 +78,13 @@
           </h1>
           <p class="text-body-1">
             VICA te permite administrar los pedidos y pagos en mesa y take away,
-            brindando la mejor experiencia de compra en tu establecimiento.
+            <br class="br--1280">brindando la mejor experiencia de compra en tu establecimiento.
           </p>
           <a href="#" class="btn btn--l btn--filled">Comenzar gratis ahora</a>
         </div>
         <div class="hero-image">
           <div id="hero-tube-png"></div>
-          <img
-            src="assets/img/HeroMobile.png"
-            id="hero-mobile-img"
-            alt="Chica sonriendo, comiendo y mirando su celular, escaneando el código QR de VICA"
-          />
-          <img
-            src="assets/img/Hero1280.png"
-            id="hero-1280-img"
-            alt="Chica sonriendo, comiendo y mirando su celular, escaneando el código QR de VICA"
-          />
+          <div id="hero-photo-png"></div>
           <div id="hero-tent-png"></div>
         </div>
       </section>
@@ -381,8 +372,8 @@
       <section class="testimonials">
         <div class="testimonials-head container-xs text--center flow-content">
           <h3>
-            Sé parte de los establecimientos que <br class="br--1280" />ya se
-            digitalizaron junto a Vica.<br class="br--1280" />
+            Sé parte de los establecimientos que <br class="br--750" />ya se
+            digitalizaron junto a Vica.<br class="br--750" />
             <span class="text--orange">¡Sumate vos también!</span>
           </h3>
           <a href="#" class="btn btn--block">Registrá tu establecimiento</a>
@@ -479,25 +470,6 @@
       </div>
     </footer>
 
-    <script>
-      $(document).ready(function () {
-        $("#features-carousel").owlCarousel({
-          margin: 32,
-          nav: false,
-          responsiveClass: true,
-          responsive: {
-            0: {
-              items: 1,
-              stagePadding: 50,
-            },
-            750: {
-              items: 2,
-              stagePadding: 50,
-            },
-          },
-        });
-      });
-    </script>
 
     <script type="module">
       import { tns } from "./js/tiny-slider.js";
@@ -541,22 +513,22 @@
         fixedWidth: 260,
         slideBy: "page",
         navAsThumbnails: true,
-        responsive: {
-          1280: {
-            disable: true,
-          },
-        },
       });
 
       var featuresSlider1280 = tns({
         container: ".features-slider-1280",
-        items: 2,
+        items: 1,
         mode: "gallery",
         navPosition: "bottom",
         gutter: 30,
         animateIn: "animate__fadeInRight",
         animateOut: "animate__fadeOut",
         controlsContainer: ".features-slider-1280-buttons",
+        responsive: {
+          1030: {
+            items: 2,
+          }
+        }
       });
     </script>
   </body>
