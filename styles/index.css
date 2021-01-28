@@ -35,6 +35,8 @@ body {
   font-family: "Lato", sans-serif;
   background: var(--clr-white);
   overflow: hidden;
+  height: 100%;
+  position: relative;
 }
 
 main {
@@ -401,8 +403,9 @@ header {
   }
   
   #hero-tube-png {
+    width: 100%;
     height: 25vw;
-    left: 5%;
+    left: 0;
     background-size: 250%;
   }
   
@@ -594,6 +597,12 @@ header {
   }
   #tns2-ow .tns-nav {
     margin-top: 3rem;
+  }
+}
+
+@media (min-width: 1900px) {
+  .backoffice-slides-container {
+    width: 67%;
   }
 }
 
@@ -796,6 +805,11 @@ footer a:hover {
 
 .background {
   position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../assets/img/Background-figure.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   z-index: 1;
 }
 /* #endregion */
