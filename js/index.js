@@ -1,5 +1,5 @@
 window.onload = function() {
-    init()
+    init();
 };
 
 function init() {

@@ -4,22 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VICA</title>
+    <!-- Global -->
     <link rel="stylesheet" href="styles/index.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
       rel="stylesheet"
     />
+    <!-- Javascript -->
     <script src="js/index.js"></script>
     <script defer src="js/testimonials.js"></script>
     <script defer src="js/whatsapp.js"></script>
     <script defer src="js/modal.js"></script>
-    <link rel="stylesheet" href="styles/owl.carousel.css" />
-    <link rel="stylesheet" href="styles/owl.theme.default.css" />
-    <script src="js/jquery.min.js"></script> 
-    <script defer src="js/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="styles/tiny-slider.css" />
-    <link rel="stylesheet" href="styles/animate.css" />
+    <!-- Libraries -->
+    <link rel="stylesheet" href="styles/libraries/tiny-slider.css" />
+    <link rel="stylesheet" href="styles/libraries/animate.css" />
+    <link rel="stylesheet" href="styles/libraries/aos.css" />
+    <script src="js/aos.js"></script>
   </head>
 
   <body>
@@ -378,10 +379,11 @@
           <a href="#" class="btn btn--block">Registrá tu establecimiento</a>
         </div>
         <div class="testimonials-content text--center">
-          <div class="testimonial-slider">
+          <div class="testimonial-slider" >
             <div
               class="testimonial flow-content flow-content--s"
               id="testimonial-1"
+              data-aos="fade-up"
             >
               <div
                 class="testimonial-img"
@@ -403,6 +405,7 @@
             <div
               class="testimonial flow-content flow-content--s"
               id="testimonial-2"
+              data-aos="fade-up"
             >
               <div
                 class="testimonial-img"
@@ -426,6 +429,7 @@
             <div
               class="testimonial flow-content flow-content--s"
               id="testimonial-3"
+              data-aos="fade-up"
             >
               <div
                 class="testimonial-img"
@@ -471,7 +475,7 @@
 
 
     <script type="module">
-      import { tns } from "./js/tiny-slider.js";
+      import { tns } from "./js/tiny-slider/tiny-slider.js";
 
       var testimonialSlider = tns({
         container: ".testimonial-slider",
@@ -528,6 +532,13 @@
             items: 2,
           }
         }
+      });
+    </script>
+
+    <script>
+      AOS.init({
+        offset: 300,
+        duration: 600,
       });
     </script>
   </body>
