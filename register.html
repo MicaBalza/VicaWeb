@@ -14,6 +14,7 @@
     <!-- Libraries -->
     <link rel="stylesheet" href="styles/libraries/materialize.css">
     <script src="js/materialize.min.js"></script>
+    <script src='js/validator.js'></script>
 </head>
 <body class="register-body">
     <div class="register-background"></div>
@@ -29,38 +30,38 @@
                 establecimiento:
             </p>
         </div>
-          <form name="form" class="register-form">
-            <div class="input-field">
-                <input id="name" type="text" class="validate">
+          <form name="form" class="register-form" action="" method="post" novalidate>
+            <div class="input-field field">
+                <input id="name" type="text" required="required" data-validate-length-range="6" data-validate-words="2">
                 <label for="name">Nombre y Apellido del dueño</label>
             </div>
             <div class="row">
-                <div class="input-field col s5">
-                    <input id="phone" type="text" class="validate">
+                <div class="input-field field col l5 s12">
+                    <input id="phone" type="tel" required="required" pattern="phone">
                     <label for="phone">Número de celular del dueño</label>
                 </div>
-                <div class="input-field col s7">
-                    <input id="email" type="text" class="validate">
+                <div class="input-field field col l7 s12">
+                    <input id="email" type="text" required="required" pattern="email">
                     <label for="email">Email del dueño</label>
                 </div>
             </div>
-            <div class="input-field">
-                <input id="business" type="text" class="validate">
+            <div class="input-field field">
+                <input id="business" type="text" required="required">
                 <label for="business">Nombre del establecimiento</label>
             </div>
             <div class="row">
-                <div class="input-field col s7">
-                    <input id="address" type="text" class="validate">
+                <div class="input-field field col l7 s12">
+                    <input id="address" type="text" required="required">
                     <label for="address">Domicilio del establecimiento</label>
                 </div>
-                <div class="input-field col s5">
-                    <input id="city" type="text" class="validate">
+                <div class="input-field field col l5 s12">
+                    <input id="city" type="text" required="required">
                     <label for="city">Ciudad del establecimiento</label>
                 </div>
             </div>
             <p class="register-checkbox">
                 <label>
-                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <input type="checkbox" class="filled-in" required="required"/>
                   <span>Al continuar, acepto que VICA se ponga en contacto conmigo vía Whatsapp, email o teléfono.</span>
                 </label>
             </p>
@@ -75,5 +76,33 @@
         </form>
         <p class="text-body-1 text--orange"><a href="#"><strong>Ya tengo una cuenta</strong></a></p>
     </main>
+
+
+    <!-- VALIDATOR -->
+    <script>
+        var validator = new FormValidator();
+
+        document.forms[0].addEventListener('blur', function(e){
+            validator.checkField(e.target)
+        }, true);
+
+        document.forms[0].addEventListener('input', function(e){
+            validator.checkField(e.target);
+        }, true);
+
+        document.forms[0].addEventListener('change', function(e){
+            validator.checkField(e.target)
+        }, true);
+
+        document.querySelector("input[type=checkbox]").addEventListener('change', function(e){
+            var result = validator.checkAll(document.forms[0]).valid;
+            if (result) {
+                document.querySelector("input[type=submit]").classList.remove("btn--disabled");
+                console.log("sucedo")
+            } else if (!result) {
+                document.querySelector("input[type=submit]").classList.add("btn--disabled");
+            }
+        });
+    </script>
 </body>
 </html>

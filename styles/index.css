@@ -873,7 +873,7 @@ footer a:hover {
   background: white;
   margin: 6rem auto;
   padding: 3rem 5.625rem;
-  width: 60%;
+  width: 70%;
   max-width: 720px;
   text-align: center;
   background: white;
@@ -910,6 +910,13 @@ footer a:hover {
 input[type=submit] {
   font-family: 'Lato', sans-serif;
   padding: 0.6em 4em
+}
+
+.field > .alert {
+  color: rgb(230, 61, 49);
+  font-size: .75rem;
+  text-align: left;
+  position: absolute;
 }
 
 /* #endregion */
