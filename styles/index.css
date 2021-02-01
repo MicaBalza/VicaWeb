@@ -375,7 +375,7 @@ header {
   background-image: url(../assets/img/HeroImage.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: left 0 top calc(-90px + 5vh);
+  background-position: left 0 top calc(-10px - 2vw);
 }
 
 #hero-tube-png {
@@ -394,7 +394,7 @@ header {
   position: absolute;
   width: 30vw;
   height: 30vw;
-  bottom: calc(6% + 3vh);
+  bottom: calc(5% + 5vw);
   left: 5vw;
   background-image: url(../assets/img/Tent.png);
   background-position: center;
