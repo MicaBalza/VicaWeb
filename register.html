@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VICA - Registro</title>
+    <!-- Global -->
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Libraries -->
+    <link rel="stylesheet" href="styles/libraries/materialize.css">
+    <script src="js/materialize.min.js"></script>
+</head>
+<body class="register-body">
+    <div class="register-background"></div>
+
+    <main class="register-main">
+        <div class="register-form-header flow-content flow-content--s">
+            <svg id="logo-register-svg">
+                <use xlink:href="assets/img/iconos.svg#logo"></use>
+            </svg>
+            <h3>¡Comenzá tu registro acá!</h3>
+            <p class="text-body-1">
+                Te pedimos que completes los siguientes datos <br>sobre el
+                establecimiento:
+            </p>
+        </div>
+          <form name="form" class="register-form">
+            <div class="input-field">
+                <input id="name" type="text" class="validate">
+                <label for="name">Nombre y Apellido del dueño</label>
+            </div>
+            <div class="row">
+                <div class="input-field col s5">
+                    <input id="phone" type="text" class="validate">
+                    <label for="phone">Número de celular del dueño</label>
+                </div>
+                <div class="input-field col s7">
+                    <input id="email" type="text" class="validate">
+                    <label for="email">Email del dueño</label>
+                </div>
+            </div>
+            <div class="input-field">
+                <input id="business" type="text" class="validate">
+                <label for="business">Nombre del establecimiento</label>
+            </div>
+            <div class="row">
+                <div class="input-field col s7">
+                    <input id="address" type="text" class="validate">
+                    <label for="address">Domicilio del establecimiento</label>
+                </div>
+                <div class="input-field col s5">
+                    <input id="city" type="text" class="validate">
+                    <label for="city">Ciudad del establecimiento</label>
+                </div>
+            </div>
+            <p class="register-checkbox">
+                <label>
+                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <span>Al continuar, acepto que VICA se ponga en contacto conmigo vía Whatsapp, email o teléfono.</span>
+                </label>
+            </p>
+
+            <p>
+                Al hacer click en “Enviar”, 
+                aceptás nuestros <a href="|" class="text--orange">Términos y Condiciones</a> <br>
+                y la <a href="|" class="text--orange">Política de Privacidad</a>.
+            </p>
+            
+            <input type="submit" value="Enviar" class="btn btn--l btn--disabled"/>
+        </form>
+        <p class="text-body-1 text--orange"><a href="#"><strong>Ya tengo una cuenta</strong></a></p>
+    </main>
+</body>
+</html>
