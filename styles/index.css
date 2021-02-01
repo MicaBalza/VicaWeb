@@ -211,7 +211,10 @@ h6 {
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
+  .br--xl {
+    display: inline;
+  }
 }
 /* #endregion */
 
@@ -282,6 +285,15 @@ h6 {
   padding: 5em;
   color: var(--clr-white);
   transition: opacity 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loading-logo-svg {
+  height: 50px;
+  width: 50px;
+  margin: 0 auto;
 }
 
 /* #endregion */
@@ -865,7 +877,7 @@ footer a:hover {
   position: absolute;
   overflow: hidden;
   width: 75%;
-  height: 25%;
+  height: 35%;
   z-index: 2;
   
 }
@@ -886,8 +898,22 @@ footer a:hover {
 }
 
 @keyframes animatedBackground2 {
-  from { background-position:-2300px 350px; }
-  to  { background-position: 300px -2250px; }
+  from { background-position:-2000px 350px; }
+  to  { background-position: 600px -2250px; }
+}
+
+@media (min-width: 1200px) {
+  @keyframes animatedBackground2 {
+    from { background-position:-2700px 550px; }
+    to  { background-position: 500px -2650px; }
+  }
+}
+
+@media (min-width: 1900px) {
+  @keyframes animatedBackground2 {
+    from { background-position:-4000px 850px; }
+    to  { background-position: 500px -3650px; }
+  }
 }
 /* #endregion */
 
