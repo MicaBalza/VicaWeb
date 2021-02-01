@@ -21,5 +21,10 @@ function heroAnimation() {
     document.querySelector("#hero-tube-png").classList.add("animate__animated", "animate__fadeInTopRight");
     document.querySelector("#hero-photo-png").classList.add("animate__animated", "animate__fadeInTopRight", "animate__delay-2s");
     document.querySelector("#hero-tent-png").classList.add("animate__animated", "animate__fadeInRight", "animate__delay-3s");
+    setInterval(tentAnimation, 3000)
 }
 
+function tentAnimation() {
+    document.querySelector("#hero-tent-png").classList.remove("animate__fadeInRight", "animate__delay-3s");
+    document.querySelector("#hero-tent-png").classList.toggle("animate__bounce");
+}

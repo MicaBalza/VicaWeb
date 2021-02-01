@@ -92,6 +92,15 @@
 
         document.forms[0].addEventListener('change', function(e){
             validator.checkField(e.target)
+            if (document.querySelector("input[type=checkbox]").checked) {
+                var result = validator.checkAll(document.forms[0]).valid;
+            if (result) {
+                document.querySelector("input[type=submit]").classList.remove("btn--disabled");
+                console.log("sucedo")
+            } else if (!result) {
+                document.querySelector("input[type=submit]").classList.add("btn--disabled");
+            }
+            }
         }, true);
 
         document.querySelector("input[type=checkbox]").addEventListener('change', function(e){

@@ -821,13 +821,57 @@ footer a:hover {
 
 .background {
   position: absolute;
+  overflow: hidden;
   width: 100%;
   height: 100%;
+  z-index: 1;
+  
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+	height: 100%;
   background: url("../assets/img/Background-figure.svg");
   background-repeat: no-repeat;
-  background-position: center;
-  z-index: 1;
+  background-position: -4200px 2700px;
+  /* background-position: 1100px -2600px; */
+  animation: animatedBackground 5s linear 0s infinite;
 }
+
+@keyframes animatedBackground {
+  from { background-position:-4200px 2700px; }
+  to  { background-position: 1100px -2600px; }
+}
+
+.background2 {
+  position: absolute;
+  overflow: hidden;
+  width: 50%;
+  height: 15%;
+  z-index: 2;
+  border: 2px solid red;
+}
+
+.background2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+	height: 100%;
+  background: url("../assets/img/Background-figure.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 150%;
+  border: 2px solid pink;
+  /* background-position: 1100px -2600px; */
+  /* animation: animatedBackground2 5s linear 0s infinite; */
+}
+
+/* @keyframes animatedBackground2 {
+  from { background-position:-4200px 2700px; }
+  to  { background-position: 1100px -2600px; }
+} */
 /* #endregion */
 
 /* --- WHATSAPP --- */
