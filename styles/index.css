@@ -21,6 +21,13 @@ background: 1
 
 */
 
+/* DEVICES WIDTH 
+Mobile Devices <= 600px s
+Tablet Devices > 600px m
+Desktop Devices > 992px l
+Large Desktop Devices > 1200px xl
+*/
+
 /* --- GENERAL ---- */
 /* #region */
 *,
@@ -169,7 +176,7 @@ h6 {
   margin: var(--spacer) 0 0 0;
 }
 
-.br--750, .br--1280 {
+.br--m, .br--l, .br--xl {
   display: none;
 }
 
@@ -195,15 +202,16 @@ h6 {
     margin-top: var(--flow-space, calc(var(--spacer) * 1.75));
   }
 
-  .br--750 {
+  .br--s {
+    display: none;
+  }
+
+  .br--m {
     display: inline;
   }
 }
 
 @media (min-width: 1100px) {
-  .br--1280 {
-    display: inline;
-  }
 }
 /* #endregion */
 
@@ -650,6 +658,11 @@ header {
   width: 28px;
   height: 24px;
   fill: var(--clr-orange-500);
+  transition: all .2s ease-in-out;
+}
+
+.testimonial:focus {
+  outline: none;
 }
 
 @media (min-width: 900px) {
@@ -674,6 +687,9 @@ header {
     background: white;
     border-radius: 10px;
     box-shadow: var(--shadow-8dp);
+  }
+  .testimonial:hover > .comillas-svg {
+    transform: scale(1.5);
   }
   #testimonial-2,
   #testimonial-3 {
@@ -848,10 +864,10 @@ footer a:hover {
 .background2 {
   position: absolute;
   overflow: hidden;
-  width: 50%;
-  height: 15%;
+  width: 75%;
+  height: 25%;
   z-index: 2;
-  border: 2px solid red;
+  
 }
 
 .background2::before {
@@ -861,17 +877,18 @@ footer a:hover {
 	height: 100%;
   background: url("../assets/img/Background-figure.svg");
   background-repeat: no-repeat;
-  background-position: bottom left;
-  background-size: 150%;
-  border: 2px solid pink;
-  /* background-position: 1100px -2600px; */
-  /* animation: animatedBackground2 5s linear 0s infinite; */
+  /* background-position: -2000px 50px; */
+  background-position: -2300px 350px;
+  background-size: 250%;
+  
+  /* background-position: 300px -2250px; */
+  animation: animatedBackground2 5s linear 0s infinite;
 }
 
-/* @keyframes animatedBackground2 {
-  from { background-position:-4200px 2700px; }
-  to  { background-position: 1100px -2600px; }
-} */
+@keyframes animatedBackground2 {
+  from { background-position:-2300px 350px; }
+  to  { background-position: 300px -2250px; }
+}
 /* #endregion */
 
 /* --- WHATSAPP --- */
