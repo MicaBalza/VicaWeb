@@ -942,30 +942,66 @@ footer a:hover {
   background: url("../assets/img/Background-figure.svg");
   background-repeat: no-repeat;
   /* background-position: -2000px 50px; */
-  background-position: -2300px 350px;
+  background-position: -2300px 50px;
   background-size: 250%;
   
   /* background-position: 300px -2250px; */
-  animation: animatedBackground2 5s linear 0s infinite;
+  /* animation: animatedBackground2 5s linear 0s infinite; */
 }
 
-@keyframes animatedBackground2 {
+/* @keyframes animatedBackground2 {
   from { background-position:-2000px 350px; }
   to  { background-position: 600px -2250px; }
+} */
+
+.background3 {
+  position: absolute;
+  overflow: hidden;
+  width: 75%;
+  height: 35%;
+  z-index: 3;
+  
+}
+
+.background3::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+	height: 100%;
+  background: url("../assets/img/tube-texture.svg");
+  background-repeat: no-repeat;
+  background-position: -1700px 450px;
+  background-size: 150%;
+  opacity: 1;
+  background-blend-mode: multiply;
+  animation: animatedBackground3 5s linear 0s infinite;
+}
+
+@keyframes animatedBackground3 {
+  from { background-position:-1500px 250px; }
+  to  { background-position: 500px -1750px; }
 }
 
 @media (min-width: 1200px) {
-  @keyframes animatedBackground2 {
+  /* @keyframes animatedBackground2 {
     from { background-position:-2700px 550px; }
     to  { background-position: 500px -2650px; }
-  }
+  } */
+  /* @keyframes animatedBackground3 {
+    from { background-position:-2700px 550px; }
+    to  { background-position: 500px -2650px; }
+  } */
 }
 
 @media (min-width: 1900px) {
-  @keyframes animatedBackground2 {
+  /* @keyframes animatedBackground2 {
     from { background-position:-4000px 850px; }
     to  { background-position: 500px -3650px; }
-  }
+  } */
+  /* @keyframes animatedBackground3 {
+    from { background-position:-4000px 850px; }
+    to  { background-position: 500px -3650px; }
+  } */
 }
 /* #endregion */
 
