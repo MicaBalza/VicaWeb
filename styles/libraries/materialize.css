@@ -931,9 +931,9 @@ input[type=tel]:not(.browser-default):focus:not([readonly]),
 input[type=number]:not(.browser-default):focus:not([readonly]),
 input[type=search]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid var(--clr-orange-500);
-  -webkit-box-shadow: 0 1px 0 0 var(--clr-orange-500);
-          box-shadow: 0 1px 0 0 var(--clr-orange-500);
+  border-bottom: 1px solid  #ff761b;
+  -webkit-box-shadow: 0 1px 0 0  #ff761b;
+          box-shadow: 0 1px 0 0 #ff761b;
 }
 
 input:not([type]):focus:not([readonly]) + label,
@@ -983,7 +983,7 @@ input[type=tel]:not(.browser-default):focus.invalid ~ label,
 input[type=number]:not(.browser-default):focus.invalid ~ label,
 input[type=search]:not(.browser-default):focus.invalid ~ label,
 textarea.materialize-textarea:focus.invalid ~ label {
-  color: #F44336;
+  color: var(--clr-orange-500);
 }
 
 input:not([type]).validate + label,
@@ -1060,9 +1060,9 @@ input.invalid[type=search]:not(.browser-default):focus,
 textarea.materialize-textarea.invalid,
 textarea.materialize-textarea.invalid:focus, .select-wrapper.invalid > input.select-dropdown,
 .select-wrapper.invalid > input.select-dropdown:focus {
-  border-bottom: 1px solid #F44336;
-  -webkit-box-shadow: 0 1px 0 0 #F44336;
-          box-shadow: 0 1px 0 0 #F44336;
+  border-bottom: 1px solid var(--clr-orange-500);
+  -webkit-box-shadow: 0 1px 0 0 var(--clr-orange-500);
+          box-shadow: 0 1px 0 0 var(--clr-orange-500);
 }
 
 input:not([type]).valid ~ .helper-text[data-success],
@@ -1183,7 +1183,7 @@ input[type=search]:not(.browser-default):focus.invalid ~ .helper-text:after,
 textarea.materialize-textarea.invalid ~ .helper-text:after,
 textarea.materialize-textarea:focus.invalid ~ .helper-text:after, .select-wrapper.invalid ~ .helper-text:after {
   content: attr(data-error);
-  color: #F44336;
+  color: var(--clr-orange-500);
 }
 
 input:not([type]) + label:after,

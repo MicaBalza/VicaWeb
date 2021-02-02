@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="styles/libraries/animate.css" />
     <link rel="stylesheet" href="styles/libraries/aos.css" />
     <script src="js/aos.js"></script>
+    <link rel="stylesheet" href="styles/libraries/materialize.css">
+    <script src="js/materialize.min.js"></script>
+    <script src='js/validator.js'></script>
   </head>
 
   <body>
@@ -54,16 +57,64 @@
     </header>
 
     <div id="modal-container">
-      <div class="modal-form text--center flow-content">
-        <svg id="logo-modal-svg">
-          <use xlink:href="assets/img/iconos.svg#logo"></use>
-        </svg>
-        <h6>¡Comenzá tu registro acá!</h6>
-        <p class="text-body-2">
-          Te pedimos que completes los siguientes datos sobre el
-          establecimiento:
-        </p>
-        <p class="close-btn">X</p>
+      <div class="modal-form text--center">
+        <div class="register-form-header flow-content flow-content--s">
+          <svg class="logo-register-svg">
+              <use xlink:href="assets/img/iconos.svg#logo"></use>
+          </svg>
+          <h3>¡Comenzá tu registro acá!</h3>
+          <p class="text-body-1">
+              Te pedimos que completes los siguientes datos sobre el
+              establecimiento:
+          </p>
+      </div>
+        <form name="form" class="register-form" action="" method="post" novalidate>
+          <div class="input-field field">
+              <input id="name" type="text" required="required" data-validate-length-range="6" data-validate-words="2">
+              <label for="name">Nombre y Apellido del dueño</label>
+          </div>
+          <div class="row">
+              <div class="input-field field col l5 s12">
+                  <input id="phone" type="tel" required="required" pattern="phone">
+                  <label for="phone">Número de celular del dueño</label>
+              </div>
+              <div class="input-field field col l7 s12">
+                  <input id="email" type="text" required="required" pattern="email">
+                  <label for="email">Email del dueño</label>
+              </div>
+          </div>
+          <div class="input-field field">
+              <input id="business" type="text" required="required">
+              <label for="business">Nombre del establecimiento</label>
+          </div>
+          <div class="row">
+              <div class="input-field field col l7 s12">
+                  <input id="address" type="text" required="required">
+                  <label for="address">Domicilio del establecimiento</label>
+              </div>
+              <div class="input-field field col l5 s12">
+                  <input id="city" type="text" required="required">
+                  <label for="city">Ciudad del establecimiento</label>
+              </div>
+          </div>
+          <p class="register-checkbox">
+              <label>
+                <input type="checkbox" class="filled-in" required="required"/>
+                <span>Al continuar, acepto que VICA se ponga en contacto conmigo vía Whatsapp, email o teléfono.</span>
+              </label>
+          </p>
+
+          <p>
+              Al hacer click en “Enviar”, 
+              aceptás nuestros <br><a href="|" class="text--orange">Términos y Condiciones</a>
+              y la <a href="|" class="text--orange">Política de Privacidad</a>.
+          </p>
+          
+          <input type="submit" value="Enviar" class="btn btn--l btn--disabled"/>
+      </form>
+        <p class="close-btn"><svg class="close-button-svg">
+          <use xlink:href="assets/img/iconos.svg#close-button"></use>
+      </svg></p>
       </div>
     </div>
 
@@ -483,7 +534,7 @@
       </div>
     </footer>
 
-
+<!-- TINY-SLIDER -->
     <script type="module">
       import { tns } from "./js/tiny-slider/tiny-slider.js";
 
@@ -545,11 +596,48 @@
       });
     </script>
 
+<!-- AOS -->
     <script>
       AOS.init({
         offset: 300,
         duration: 600,
       });
     </script>
+
+<!-- VALIDATOR -->
+    <script>
+      var validator = new FormValidator();
+
+      document.forms[0].addEventListener('blur', function(e){
+          validator.checkField(e.target)
+      }, true);
+
+      document.forms[0].addEventListener('input', function(e){
+          validator.checkField(e.target);
+      }, true);
+
+      document.forms[0].addEventListener('change', function(e){
+          validator.checkField(e.target)
+          if (document.querySelector("input[type=checkbox]").checked) {
+              var result = validator.checkAll(document.forms[0]).valid;
+          if (result) {
+              document.querySelector("input[type=submit]").classList.remove("btn--disabled");
+              console.log("sucedo")
+          } else if (!result) {
+              document.querySelector("input[type=submit]").classList.add("btn--disabled");
+          }
+          }
+      }, true);
+
+      document.querySelector("input[type=checkbox]").addEventListener('change', function(e){
+          var result = validator.checkAll(document.forms[0]).valid;
+          if (result) {
+              document.querySelector("input[type=submit]").classList.remove("btn--disabled");
+              console.log("sucedo")
+          } else if (!result) {
+              document.querySelector("input[type=submit]").classList.add("btn--disabled");
+          }
+      });
+  </script>
   </body>
 </html>
