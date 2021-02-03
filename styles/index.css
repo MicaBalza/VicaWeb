@@ -465,6 +465,29 @@ header {
 /* #region */
 
 .features-img {
+ 
+}
+
+.cellphone-mobile-img {
+  position: absolute;
+  width: 100%;
+  height: 600px;
+  margin-top: -50px;
+  background-image: url(../assets/img/Cellphone.png);
+  background-repeat: no-repeat;
+  background-size: 125%;
+  background-position: right -30% bottom 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cellphone-slider-container {
+  width: 50%;
+  margin: 140px auto 50px auto;
+}
+
+
+/* .features-img {
   position: relative;
   z-index: -1;
   width: 100%;
@@ -492,7 +515,7 @@ header {
 
 .cellphone-slides-container {
  
-}
+} */
 
 .features-content {
   position: relative;
@@ -555,7 +578,7 @@ header {
 }
 
 @media (min-width: 750px) {
-  .features-img {
+  /* .features-img {
     width: 35%;
   }
 
@@ -581,7 +604,7 @@ header {
     width: 65%;
     right: calc(100vw / 10);
     bottom: 25px;
-  }
+  } */
 
   .features-content {
     margin-top: 4rem;
