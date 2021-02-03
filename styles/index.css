@@ -471,21 +471,28 @@ header {
 .cellphone-mobile-img {
   position: absolute;
   width: 100%;
-  height: 600px;
+  min-height: 550px;
+  height: 160vw;
   margin-top: -50px;
   background-image: url(../assets/img/Cellphone.png);
   background-repeat: no-repeat;
   background-size: 125%;
-  background-position: right -30% bottom 0;
+  background-position: calc(100% - 7.7vw) calc(100% - 20px);
   z-index: 1;
   pointer-events: none;
 }
 
 .cellphone-slider-container {
   width: 50%;
-  margin: 140px auto 50px auto;
+  margin: max(100px, calc(110vw / 3 - 35px)) auto 50px auto;
 }
 
+@media (max-width: 320px ) {
+  .cellphone-slider-container {
+    width: 50%;
+    margin: 115px auto 50px auto;
+  }
+}
 
 /* .features-img {
   position: relative;
