@@ -71,6 +71,8 @@ a {
   color: inherit;
 }
 
+
+
 /* #endregion */
 
 /* --- TEXT --- */
@@ -281,6 +283,27 @@ h6 {
     --p: 0.8em 3em;
   }
 }
+/* #endregion */
+
+/* --- SLIDERS --- */
+/* #region */
+
+.arrow-next-svg,
+.arrow-prev-svg {
+  width: 39px;
+  height: 39px;
+  --fill: var(--clr-orange-500);
+  --arrow: var(--clr-white);
+  
+}
+
+.arrow-next-svg:hover {
+  --fill: white;
+  --arrow: var(--clr-orange-500);
+  transition: fill 1s ease;
+}
+
+
 /* #endregion */
 
 /* --- LOADING --- */
@@ -548,11 +571,7 @@ header {
   fill: var(--clr-orange-500);
 }
 
-#arrow-next-svg,
-#arrow-prev-svg {
-  width: 39px;
-  height: 39px;
-}
+
 
 @media (min-width: 750px) {
 
