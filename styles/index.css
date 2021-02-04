@@ -36,6 +36,10 @@ Large Desktop Devices > 1200px xl
   box-sizing: border-box;
 }
 
+*:focus  {
+  outline: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -473,7 +477,7 @@ header {
   width: 100%;
   min-height: 550px;
   height: 160vw;
-  margin-top: -50px;
+  margin-top: -14vw;
   background-image: url(../assets/img/Cellphone.png);
   background-repeat: no-repeat;
   background-size: 125%;
@@ -484,13 +488,13 @@ header {
 
 .cellphone-slider-container {
   width: 50%;
-  margin: max(100px, calc(110vw / 3 - 35px)) auto 50px auto;
+  margin: 26.5vw auto 50px auto;
 }
 
 @media (max-width: 320px ) {
   .cellphone-slider-container {
     width: 50%;
-    margin: 115px auto 50px auto;
+    margin: 37vw auto 50px auto;
   }
 }
 
@@ -542,10 +546,6 @@ header {
   width: 50px;
   height: 50px;
   fill: var(--clr-orange-500);
-}
-
-#arrow-next-svg {
-  transform: rotate(180deg);
 }
 
 #arrow-next-svg,
