@@ -21,11 +21,11 @@ function heroAnimation() {
     document.querySelector("#hero-tube-png").classList.add("animate__animated", "animate__fadeInTopRight");
     document.querySelector("#hero-photo-png").classList.add("animate__animated", "animate__fadeInTopRight", "animate__delay-2s");
     document.querySelector("#hero-tent-png").classList.add("animate__animated", "animate__fadeInRight", "animate__delay-3s");
-    document.querySelector("#hero-tent-png").addEventListener('mouseenter', function(e) {
+    /* document.querySelector("#hero-tent-png").addEventListener('mouseenter', function(e) {
         e.target.classList.remove("animate__fadeInRight", "animate__delay-3s");
         e.target.classList.add("animate__bounce");
         setTimeout(function() {
             e.target.classList.remove("animate__bounce");
         }, 2500);
-    })
+    }) */
 }

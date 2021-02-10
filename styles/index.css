@@ -514,13 +514,21 @@ header {
  
 }
 
+#cellphone-desktop-img {
+  background-image: url(../assets/img/Cellphone.png);
+  display: none;
+}
+
+#cellphone-mobile-img {
+  background-image: url(../assets/img/CellphoneMobile.png);
+}
+
 .cellphone-mobile-img {
   position: absolute;
   width: 100%;
   min-height: 550px;
   height: 160vw;
   margin-top: -14vw;
-  background-image: url(../assets/img/Cellphone.png);
   background-repeat: no-repeat;
   background-size: 125%;
   background-position: calc(100% - 7.7vw) calc(100% - 20px);
@@ -593,6 +601,14 @@ header {
 
 
 @media (min-width: 750px) {
+
+  #cellphone-mobile-img {
+    display: none;
+  }
+
+  #cellphone-desktop-img {
+    display: block;
+  }
 
   .features-img {
     width: 35%;

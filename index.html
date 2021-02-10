@@ -155,7 +155,8 @@
 
       <section class="features split split--l">
         <div class="features-img">
-          <div class="cellphone-mobile-img"></div>
+          <div class="cellphone-mobile-img" id="cellphone-desktop-img"></div>
+          <div class="cellphone-mobile-img" id="cellphone-mobile-img"></div>
           <div class="cellphone-slider-container">
             <div class="cellphone-slider">
               <div class="cellphone-slide" id="cellphone-1">
@@ -443,7 +444,7 @@
           </h3>
           <a href="#" class="btn btn--block">Registrá tu establecimiento</a>
         </div>
-        <div class="testimonials-content text--center">
+        <div class="testimonials-content text--center" data-aos="fade-up">
           <div class="testimonial-slider" >
             <div
               class="testimonial flow-content flow-content--s"
@@ -471,6 +472,7 @@
               class="testimonial flow-content flow-content--s"
               id="testimonial-2"
               data-aos="fade-up"
+              data-aos-delay="250"
             >
               <div
                 class="testimonial-img"
@@ -495,6 +497,7 @@
               class="testimonial flow-content flow-content--s"
               id="testimonial-3"
               data-aos="fade-up"
+              data-aos-delay="500"
             >
               <div
                 class="testimonial-img"
@@ -621,10 +624,7 @@
 
 <!-- AOS -->
     <script>
-      AOS.init({
-        offset: 300,
-        duration: 600,
-      });
+      AOS.init();
     </script>
 
 <!-- VALIDATOR -->
